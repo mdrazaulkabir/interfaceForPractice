@@ -140,7 +140,7 @@ CalculateTotal class has an abstract method total() and the CalculateAverage cla
 abstract method average(). The Student class implements both the CalculateTotal and CalculateAverage 
 classes. The Student class has to implement the total() and average() methods.*/
 
-
+    //solve by constructor:
 // abstract class CalculateTotal{
 //   total();
 // }
@@ -167,5 +167,38 @@ classes. The Student class has to implement the total() and average() methods.*/
 //   print("Student total mark is: ${student.total()}");
 //   student.average();
 // }
+
+
+////solve by without constructor:
+abstract  class CalTotal{
+ total();
+}
+abstract  class CalAverage{
+  average();
+}
+
+class Student implements CalTotal,CalAverage{
+  int? mark1,mark2,mark3;
+
+  @override
+  int total() {
+    return mark1!+mark2!+mark3!;
+    
+  }
+  
+  @override
+  average() {
+    print("The average mark is ${total()/3}");
+  }
+}
+
+main(){
+  Student student=Student();
+  student.mark1=5;
+  student.mark2=5;
+  student.mark3=5;
+  print("the total number is ${student.total()}");
+  student.average();
+  }
 
 
