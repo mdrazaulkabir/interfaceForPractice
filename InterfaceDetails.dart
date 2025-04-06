@@ -106,7 +106,7 @@ void main() {
 
 
 Example2: of Using implements (Interface):
-When you're implementing an interface, you don’t use super because the interface          //vvi
+When you're implementing an interface, you don’t use super because the interface      //vvi  vvi  vvi
  doesn't have a constructor. Instead, you define the constructor in the implementing class.
 
 abstract class AnimalInterface {
